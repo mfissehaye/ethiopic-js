@@ -1,0 +1,25 @@
+{
+  "name": "ethiopic-js",
+  "version": "1.0.0",
+  "description": "Converts Ethiopian calendar dates into Gregorian and vice versa.",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mfissehaye/ethoipic-js.git"
+  },
+  "keywords": [
+    "ethiopic",
+    "ethiopian",
+    "orthodox",
+    "amharic",
+    "julian"
+  ],
+  "author": "merhawifissehaye@gmail.com",
+  "license": "MIT",
+  "bugs": "https://github.com/mfissehaye/ethoipic-js.git/issues",
+  "homepage": "https://github.com/mfissehaye/ethoipic-js.git",
+  "devDependencies": {
+    "mocha": "^4.1.0",
+    "should": "^13.2.0"
+  }
+}

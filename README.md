@@ -1,0 +1,1 @@
+Converts Ethiopian calendar dates into Gregorian and vice versa.
