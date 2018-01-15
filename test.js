@@ -52,3 +52,10 @@ describe('isValidEthiopicDate', function() {
         utils.isValidEthiopicDate(2010, 1, 30).should.be.true()
     })
 })
+
+describe('isLeapYear', function() {
+    it('should check if an ethiopic date is leap or not', function() {
+        utils.isLeapEthiopicYear(1900).should.be.true()
+        utils.isLeapEthiopicYear(1901).should.not.be.true()
+    })
+})

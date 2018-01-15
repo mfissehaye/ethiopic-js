@@ -20,8 +20,13 @@ const isValidEthiopicDate = (jy, jm, jd) => {
     return valid
 }
 
+const isLeapEthiopicYear = (jy) => {
+    return EthiopicCalendar.isLeapYear(jy)
+}
+
 module.exports = {
     toEthiopic,
     toGregorian,
     isValidEthiopicDate,
+    isLeapEthiopicYear,
 }
