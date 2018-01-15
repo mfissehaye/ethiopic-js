@@ -1,1 +1,2 @@
-Converts Ethiopian calendar dates into Gregorian and vice versa.
+ES6 implementation of Ethiopian dates conversion.
+Based on [calendariale](https://github.com/catull/calendariale)
