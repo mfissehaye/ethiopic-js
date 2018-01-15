@@ -1,4 +1,4 @@
-import { EthiopicCalendar, GregorianCalendar } from './src/calendar/index';
+import * as utils from './index'
 
 require('should')
 
@@ -27,9 +27,7 @@ const testDates = [
 describe('toEthiopic', function() {
     it('should convert Ethiopic to Gregorian correctly', function() {
         testDates.forEach(date => {
-            let jdn = GregorianCalendar.toJdn(...date.gd)
-            let e = EthiopicCalendar.fromJdn(jdn)
-            e.toArray().should.be.eql(date.ed)
+            utils.toGregorian(...date.ed).should.be.eql(date.gd)
         })
     })
 })
@@ -37,9 +35,7 @@ describe('toEthiopic', function() {
 describe('toGregorian', function() {
     it('should convert Gregorian to Ethiopic correctly', function() {
         testDates.forEach(date => {
-            let jdn = EthiopicCalendar.toJdn(...date.ed)
-            let g = GregorianCalendar.fromJdn(jdn)
-            g.toArray().should.be.eql(date.gd)
+            utils.toEthiopic(...date.gd).should.be.eql(date.ed)
         })
     })
 })
