@@ -10,7 +10,18 @@ const toGregorian = (jy, jm, jd) => {
     return GregorianCalendar.fromJdn(jdn).toArray()
 }
 
+const isValidEthiopicDate = (jy, jm, jd) => {
+    let valid = true
+    try {
+        EthiopicCalendar.validate(jy, jm, jd)
+    } catch(error) {
+        valid = false
+    }
+    return valid
+}
+
 module.exports = {
     toEthiopic,
     toGregorian,
+    isValidEthiopicDate,
 }

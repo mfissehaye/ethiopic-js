@@ -40,11 +40,15 @@ describe('toGregorian', function() {
     })
 })
 
-/* describe('isValidEthiopicDate', function() {
+describe('isValidEthiopicDate', function() {
     it('should check validity of ethiopic date', function() {
-        e.isValidEthiopicDate(1, 1, 1992).should.be.true
-        e.isValidEthiopicDate(1, 13, 2005).should.be.true
-        e.isValidEthiopicDate(30, 1, 1998).should.be.true
-        e.isValidEthiopicDate(8, 1, 1992).should.be.true
+        testDates.forEach(date => {
+            utils.isValidEthiopicDate(...date.ed).should.be.true()
+        })
+        
+        utils.isValidEthiopicDate(1900, 13, 7).should.not.be.true()
+        utils.isValidEthiopicDate(1900, 13, 6).should.be.true()
+        utils.isValidEthiopicDate(1901, 13, 6).should.not.be.true()
+        utils.isValidEthiopicDate(2010, 1, 30).should.be.true()
     })
-}) */
+})
