@@ -5,7 +5,7 @@
   "main": "dist/index.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/mfissehaye/ethoipic-js.git"
+    "url": "https://github.com/mfissehaye/ethiopic-js.git"
   },
   "scripts": {
     "test": "npm run build && mocha --compilers js:babel-core/register --reporter spec test --inspect",
@@ -22,8 +22,8 @@
   ],
   "author": "mfissehaye",
   "license": "MIT",
-  "bugs": "https://github.com/mfissehaye/ethoipic-js.git/issues",
-  "homepage": "https://github.com/mfissehaye/ethoipic-js.git",
+  "bugs": "https://github.com/mfissehaye/ethiopic-js.git/issues",
+  "homepage": "https://github.com/mfissehaye/ethiopic-js.git",
   "devDependencies": {
     "assert": "^1.4.1",
     "babel-cli": "^6.26.0",
