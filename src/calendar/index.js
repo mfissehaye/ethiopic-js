@@ -1,2 +1,7 @@
-export * from './GregorianCalendar'
-export * from './EthiopicCalendar'
+import GregorianCalendar from './GregorianCalendar'
+import EthiopicCalendar from './EthiopicCalendar'
+
+export {
+    GregorianCalendar,
+    EthiopicCalendar,
+}
