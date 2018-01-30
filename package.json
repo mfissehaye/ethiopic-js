@@ -1,6 +1,6 @@
 {
   "name": "ethiopic-js",
-  "version": "1.2.4",
+  "version": "1.2.5",
   "description": "Converts Ethiopian calendar dates into Gregorian and vice versa.",
   "main": "dist/index.js",
   "repository": {
