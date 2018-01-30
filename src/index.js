@@ -1,4 +1,4 @@
-import { EthiopicCalendar, GregorianCalendar } from './src/calendar/index'
+import { EthiopicCalendar, GregorianCalendar } from './calendar/index'
 
 const toEthiopic = (jy, jm, jd) => {
     let jdn = GregorianCalendar.toJdn(jy, jm, jd)
