@@ -1,31 +1,32 @@
-import * as jdn_utils from './jdn_utils'
+import { EthiopicCalendar, GregorianCalendar } from './src/calendar/index'
 
-const processArgs = (gy, gm, gd) => {
-  let type = Object.prototype.toString.call(gy)
-  switch(type) {
-    case '[Object Date]':
-      gd = gy.getDay()
-      gm = gy.getMonth()
-      gy = gy.getFullYear()
-
-      break;
-    case '[Object Array]':
-      [gy, gm, gd] = gy
-      break;
-  }
-
-  return [gy, gm, gd]
+const toEthiopic = (jy, jm, jd) => {
+    let jdn = GregorianCalendar.toJdn(jy, jm, jd)
+    return EthiopicCalendar.fromJdn(jdn).toArray()
 }
 
-export const toEthiopic = (gy, gm, gd) => {
-  let d = processArgs(gy, gm, gd)
-  let jdn = jdn_utils.gregorianToJDN(...d)
-  return jdn_utils.jdnToEthiopic(...d)
+const toGregorian = (jy, jm, jd) => {
+    let jdn = EthiopicCalendar.toJdn(jy, jm, jd)
+    return GregorianCalendar.fromJdn(jdn).toArray()
 }
 
-export const toGregorian = (gy, gm, gd) => {
-  let d = processArgs(gy, gm, gd)
-  console.log('The day is: ', d)
-  let jdn = jdn_utils.ethiopicToJDN(...d)
-  return jdn_utils.jdnToGregorian(...d)
+const isValidEthiopicDate = (jy, jm, jd) => {
+    let valid = true
+    try {
+        EthiopicCalendar.validate(jy, jm, jd)
+    } catch(error) {
+        valid = false
+    }
+    return valid
+}
+
+const isLeapEthiopicYear = (jy) => {
+    return EthiopicCalendar.isLeapYear(jy)
+}
+
+module.exports = {
+    toEthiopic,
+    toGregorian,
+    isValidEthiopicDate,
+    isLeapEthiopicYear,
 }

@@ -1,6 +1,6 @@
 import { YearMonthCalendar, CalendarValidationException } from "./BaseCalendars";
 import { ethiopic } from "./Constants";
-import { mod } from "../Astro";
+import { mod } from "./Astro";
 
 export class EthiopicCalendar extends YearMonthCalendar {
     constructor(jdn, year, month, day) {

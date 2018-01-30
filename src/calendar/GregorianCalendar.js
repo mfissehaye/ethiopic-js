@@ -1,6 +1,6 @@
 import { LeapCalendar, CalendarValidationException } from "./BaseCalendars";
 import { gregorian, Month } from "./Constants";
-import { mod } from "../Astro";
+import { mod } from "./Astro";
 
 const daysInMonth = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
 
