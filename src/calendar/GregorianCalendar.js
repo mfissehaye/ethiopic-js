@@ -4,7 +4,7 @@ import { mod } from "./Astro";
 
 const daysInMonth = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
 
-export class GregorianCalendar extends LeapCalendar {
+export default class GregorianCalendar extends LeapCalendar {
     constructor(jdn, year, month, day) {
         super(jdn, year, month, day, GregorianCalendar.isLeapYear(year))
     }
